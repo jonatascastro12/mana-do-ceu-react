@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 
 class Main extends Component {
     render() {
         return (
-            <main class="container mt-5">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-lg-6">
+            <main className="container mt-5">
+                <div className="row d-flex justify-content-center">
+                    <div className="col-12 col-lg-6">
                         <h1>Devedores do amor</h1>
 
                         <p><em>"Não devam nada a ninguém, a não ser o amor de uns pelos outros, pois aquele que ama seu

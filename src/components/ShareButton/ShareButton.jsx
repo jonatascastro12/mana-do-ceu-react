@@ -1,24 +1,30 @@
 import React, {Component} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 class ShareButton extends Component {
 
-    getTypeProps(type) {
-        switch (type) {
+    get getTypeProps() {
+        switch (this.props.type) {
+            case 'whatsapp':
+                return {color: '#FFFFFF', backgroundColor: '#3FAD46', icon: 'whatsapp'};
             case 'facebook':
-                return {color: '#4582ec', icon: 'facebook-f'};
+                return {color: '#FFFFFF', backgroundColor: '#4582ec', icon: 'facebook-f'};
             case 'twitter':
-                return '#55acee';
+                return {color: '#FFFFFF', backgroundColor: '#55acee', icon: 'twitter'};
             case 'google':
-                return '#D34836'
-
+                return {color: '#FFFFFF', backgroundColor: '#D34836', icon: 'twitter'};
+            default:
+                return {iconType: 'fa', color: '#222222', backgroundColor: '#fdfdfd', icon: 'link'};
         }
     }
 
     render() {
+        let props = this.getTypeProps;
         return (
-            <button className="btn">
-                <i className={'fa fa-' + this.props.icon}></i>
-                {this.children}
+            <button type="button" id={this.props.id} className="btn m-2"
+                    style={{color: props.color, backgroundColor: props.backgroundColor}}>
+                <FontAwesomeIcon icon={[props.iconType ? props.iconType : 'fab', props.icon]}/>&nbsp;
+                {this.props.children}
             </button>
         );
     }

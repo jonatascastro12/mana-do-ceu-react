@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+import {library} from '@fortawesome/fontawesome-svg-core'
+import {faLink} from '@fortawesome/free-solid-svg-icons'
+import {faWhatsapp, faFacebookF, faTwitter, faGooglePlus} from '@fortawesome/free-brands-svg-icons'
 import './App.css';
 import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import Share from "./components/Share/Share";
+import ClipboardJS from 'clipboard';
+
+library.add(faWhatsapp, faLink, faFacebookF, faTwitter, faGooglePlus);
 
 class App extends Component {
     render() {
@@ -11,7 +16,7 @@ class App extends Component {
             <div className="App">
                 <Header/>
                 <Main/>
-                <Share />
+                <Share clipboard={ClipboardJS}/>
             </div>
         );
     }
