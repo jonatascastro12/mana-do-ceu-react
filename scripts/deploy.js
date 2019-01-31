@@ -104,4 +104,4 @@ walk(distFolderPath, (filepath, rootdir, subdir, filename) => {
 });
 
 // clear cache CloudFront
-clearCacheCF(deploymentVariables.deploy.distributionId);
+// clearCacheCF(deploymentVariables.deploy.distributionId);
