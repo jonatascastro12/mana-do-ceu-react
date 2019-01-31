@@ -18,17 +18,20 @@ class Main extends Component {
     }
 
     render() {
+        const renderHTML = (rawHTML) => React.createElement("div", {dangerouslySetInnerHTML: {__html: rawHTML.replace(/\\n|\\r/g, " ")}});
+
+
         return (
             <main className="container mt-5">
                 <div className="row d-flex justify-content-center">
                     <div className="col-12 col-lg-6">
                         <h1>{this.props.mana ? this.props.mana.title : ''}</h1>
 
-                        <p className="lead"><em>{this.props.mana ? this.props.mana.citation : ''}<br/>
-                            ({this.props.mana ? this.props.mana.reference : ''})</em></p>
+                        <p className="lead"><em>{this.props.mana ? renderHTML(this.props.mana.citation): ''}<br/>
+                            {this.props.mana ? this.props.mana.reference: ''}</em></p>
 
                         <p className="lead">
-                            {this.props.mana ? this.props.mana.content : ''}
+                            {this.props.mana ? renderHTML(this.props.mana.content) : ''}
                         </p>
                     </div>
                 </div>
