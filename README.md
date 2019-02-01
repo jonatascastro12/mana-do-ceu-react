@@ -4,6 +4,12 @@ There is a index file: `public/mana/_index.json` that lists each post. When acce
 
 Visit: http://www.manadoceu.com
 
+## Techonologies
+- Javascript ES6
+- React
+- React router
+- Bootstrap 
+
 ## Quick start
 1. Install dependencies: `npm install`
 2. Run dev server: `npm start`
