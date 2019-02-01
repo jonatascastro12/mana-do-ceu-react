@@ -1,6 +1,6 @@
 # Mana do Céu
 This project is a daily blog website that runs completly at client-side. Each message is stored as a .json in `/public/mana` folder.
-There is a index file: `public/mana/_index.json` that lists each post in order to make one post per year day.
+There is a index file: `public/mana/_index.json` that lists each post. When accessing the root page, it will get the day of the year and fetch corresponding post according to index file.
 
 Visit: http://www.manadoceu.com
 
