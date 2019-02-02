@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png"/>
     <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -25,16 +25,17 @@
     <title>Maná do Céu</title>
 </head>
 <body>
-<div id="fb-root"></div>
+
 <script>(function (d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s);
     js.id = id;
-    js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.2&appId=941276679301369&autoLogAppEvents=1';
+    js.src = 'https://connect.facebook.net/pt_BR/all.js#xfbml=1&version=v3.2&appId=941276679301369&autoLogAppEvents=1';
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="fb-root"></div>
 <div id="root"></div>
 <!--
   This HTML file is a template.
