@@ -13,7 +13,7 @@ class Main extends Component {
     }
 
     componentDidUpdate() {
-        if (window.FB) {
+        if (window.FB && window.FB.XFBML && window.FB.XFBML.parse) {
             window.FB.XFBML.parse();
         }
     }
