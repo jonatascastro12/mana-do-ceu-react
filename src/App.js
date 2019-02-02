@@ -13,10 +13,18 @@ import {API_URL} from "./index";
 library.add(faWhatsapp, faLink, faFacebookF, faTwitter, faGooglePlus, faHome, faInfoCircle);
 
 class App extends Component {
+    constructor(props) {
+        super(props);
 
-    state = {
-        slug: ''
-    };
+        this.state = {
+            slug: ''
+        };
+
+        const day = this.getYearDay();
+        this.fetchIndex(day).then((slug) => {
+            this.setState({slug})
+        });
+    }
 
     async fetchIndex(day) {
         return get(`${API_URL}_index.json`).then((res) => {
@@ -37,18 +45,13 @@ class App extends Component {
             <BrowserRouter>
                 <Switch>
                     <Route path="/" exact render={() => {
-                        const day = this.getYearDay();
-
-                        this.fetchIndex(day).then((slug) => {
-                            this.setState({slug})
-                        });
-
                         if (this.state.slug) {
                             return (
                                 <Redirect to={`/mana/${this.state.slug}`}/>
                             )
                         }
-                        return <div className="h-100 w-100 d-flex justify-content-center align-content-center"><Spinner/></div>;
+                        return <div className="h-100 w-100 d-flex justify-content-center align-content-center">
+                            <Spinner/></div>;
                     }}/>
                     <Route path="/sobre" component={About}/>
                     <Route path="/mana/:slug" component={Mana}/>

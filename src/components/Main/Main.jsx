@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {APP_URL} from "../../index";
+import styles from './Main.module.css'
 
 class Main extends Component {
     renderFbComments() {
@@ -18,7 +19,15 @@ class Main extends Component {
     }
 
     render() {
-        const renderHTML = (rawHTML) => React.createElement("div", {dangerouslySetInnerHTML: {__html: rawHTML.replace(/\\n|\\r/g, " ")}});
+        const renderHTML = (rawHTML) =>
+            React.createElement("span", {
+                dangerouslySetInnerHTML: {
+                    __html:
+                        rawHTML
+                            .replace(/\\n|\\r/g, " ")
+                            .replace(/\<p\>&nbsp\;\<\/p\>/g, " ")
+                }
+            });
 
 
         return (
@@ -27,10 +36,11 @@ class Main extends Component {
                     <div className="col-12 col-lg-6">
                         <h1>{this.props.mana ? this.props.mana.title : ''}</h1>
 
-                        <p className="lead"><em>{this.props.mana ? renderHTML(this.props.mana.citation): ''}<br/>
-                            {this.props.mana ? this.props.mana.reference: ''}</em></p>
-
-                        <p className="lead">
+                        <p className={'lead ' + styles.animated + ' ' + styles.fadeIn}>
+                            <em>{this.props.mana ? renderHTML(this.props.mana.citation) : ''}
+                                {this.props.mana ? this.props.mana.reference : ''}</em>
+                        </p>
+                        <p className="lead animated fadeIn">
                             {this.props.mana ? renderHTML(this.props.mana.content) : ''}
                         </p>
                     </div>
