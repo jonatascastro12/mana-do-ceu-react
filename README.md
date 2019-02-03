@@ -8,7 +8,7 @@ This is my first React public project. =)
 
 Visit: http://www.manadoceu.com
 
-## Techonologies
+## Technologies
 - Javascript ES6
 - React
 - React router
