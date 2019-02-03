@@ -1,8 +1,11 @@
 
-.bg-footer{
+
+
+.bg-footer {
     background: #3a404d;
+    bottom: 0;
 }
 
-.footer-credits{
+.footer-credits {
     color: #e6e6e6;
 }

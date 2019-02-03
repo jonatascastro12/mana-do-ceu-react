@@ -5,7 +5,7 @@ import './Footer.css';
 class Footer extends Component {
     render() {
         return (
-            <footer className="pt-5 pb-5 bg-footer">
+            <footer className="pt-5 pb-5 bg-footer footer">
                 <div className="container">
                     <div className="row d-flex justify-content-center">
                         <div className="col-lg-4 col-md-6">
