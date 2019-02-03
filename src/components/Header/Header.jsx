@@ -9,7 +9,7 @@ class Header extends Component {
                     <a href="https://www.manadoceu.com">
                         <img height="100" alt="Maná do Céu"
                              className="mana-logo floating"
-                             src="https://d3kzcxx51d0b63.cloudfront.net/static/images/logo.svg"/></a>
+                             src="/logo.svg"/></a>
                 </div>
             </header>
         );
