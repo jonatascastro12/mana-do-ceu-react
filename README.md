@@ -10,7 +10,7 @@ Visit: http://www.manadoceu.com
 
 ## Technologies
 - [x] Javascript ES6
-- [x] React 16
+- [x] React 16.7
 - [x] React router
 - [x] Bootstrap 4
 
