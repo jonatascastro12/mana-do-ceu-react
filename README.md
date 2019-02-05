@@ -4,8 +4,6 @@ There is a index file: `/public/mana/_index.json` that lists each post. When acc
 
 ![Maná do Céu logo](https://github.com/jonatascastro12/mana-do-ceu-react/raw/master/public/mana.gif)
 
-This is my first React public project. =)
-
 Visit: http://www.manadoceu.com
 
 ## Technologies
