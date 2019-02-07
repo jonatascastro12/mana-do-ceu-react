@@ -28,7 +28,7 @@ The messages were written by my father pastor Eli Vilela.
 Feel free to contribute to this project. Create a new issue if you have a new idea to this project.
 
 ## Roadmap / Next steps
-- [ ] Make more shareable open source project
+- [ ] Make this project more shareable to contribute as an open source project
 - [ ] Auto generate image SEO metatags using Amazon Lambda/API Gateway
 - [ ] Create a local client for manage the posts (manas)
 - [ ] Make deploy on S3 using after Git pushing
