@@ -24,3 +24,12 @@ Visit: http://www.manadoceu.com
 The posts contains scripture verses with a piece of meditation message written in portuguese.
 The messages were written by my father pastor Eli Vilela.
 
+## Contributions
+Feel free to contribute to this project. Create a new issue if you have a new idea to this project.
+
+## Roadmap / Next steps
+- [ ] Make more shareable open source project
+- [ ] Auto generate image SEO metatags using Amazon Lambda/API Gateway
+- [ ] Create a local client for manage the posts (manas)
+- [ ] Make deploy on S3 using after Git pushing
+- [ ] Create multi-language support
