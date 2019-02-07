@@ -13,13 +13,13 @@ class About extends Component {
                     </div>
                     <div className="container">
                         <div className="row mt-5">
-                            <div className="col-6">
+                            <div className="col-lg-6">
                                 <iframe width="100%" height="315" src="https://www.youtube.com/embed/4o6BwaybOjw"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                         allowFullScreen></iframe>
                             </div>
-                            <div className="col-6">
+                            <div className="col-lg-6">
                                 <p>O Maná do Céu é um projeto de devocionais diários
                                     disponíveis em mídias onlines.</p>
                                 <p>O projeto surgiu depois de
