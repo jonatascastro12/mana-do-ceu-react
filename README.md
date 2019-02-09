@@ -15,6 +15,8 @@ Visit: http://www.manadoceu.com
 ## Hosting
 - [x] Amazon S3
 - [x] Amazon Cloudfront
+- [x] Amazon Lambda
+- [x] Amazon API Gateway
 
 ## Quick start
 1. Install dependencies: `npm install`
