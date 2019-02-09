@@ -47,13 +47,14 @@ class App extends Component {
                     <Route path="/" exact render={() => {
                         if (this.state.slug) {
                             return (
-                                <Redirect to={`/mana/${this.state.slug}`}/>
+                                <Redirect to={`/mana_/${this.state.slug}`}/>
                             )
                         }
                         return <div className="h-100 w-100 d-flex justify-content-center align-content-center">
                             <Spinner/></div>;
                     }}/>
                     <Route path="/sobre" component={About}/>
+                    <Route path="/mana_/:slug" component={Mana}/>
                     <Route path="/mana/:slug" component={Mana}/>
                 </Switch>
             </BrowserRouter>

@@ -28,8 +28,11 @@ The messages were written by my father pastor Eli Vilela.
 Feel free to contribute to this project. Create a new issue if you have a new idea to this project.
 
 ## Roadmap / Next steps
+- [x] Auto generate SEO metatags using Amazon Lambda/API Gateway
+  - This was made using API Gateway and AWS Lambda to generate SEO metatags page and redirect to React client.
+  This is transparent to the user.
+- [ ] Generate post thumbnail using API Gateway and AWS Lambda
 - [ ] Make this project more shareable to contribute as an open source project
-- [ ] Auto generate image SEO metatags using Amazon Lambda/API Gateway
 - [ ] Create a local client for manage the posts (manas)
 - [ ] Make deploy on S3 using after Git pushing
 - [ ] Create multi-language support
