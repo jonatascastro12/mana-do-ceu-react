@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Header from "../../components/Header/Header";
 import Main from "../../components/Main/Main";
 import Share from "../../components/Share/Share";
 import ClipboardJS from "clipboard";
 import Footer from "../../components/Footer/Footer";
-import {get} from 'axios';
-import {API_URL} from "../../index";
+import { get } from 'axios';
+import { API_URL } from "../../index";
 
 
 class Mana extends Component {
@@ -17,25 +17,25 @@ class Mana extends Component {
             mana: null
         }
     }
-
-    componentWillMount() {
-        let slug = this.props.match.params.slug;
-        this.fetchMana(slug);
-    }
-
+    
     fetchMana(slug) {
         get(`${API_URL}${slug}.json`).then((res) => {
-            this.setState({slug, mana: res.data});
+            this.setState({ slug, mana: res.data });
         })
+    }
+
+    componentDidMount() {
+        let slug = this.props.match.params.slug;
+        this.fetchMana(slug);
     }
 
     render() {
         return (
             <div className="text-center">
-                <Header/>
-                <Main {...this.state}/>
-                <Share clipboard={ClipboardJS}  {...this.state}/>
-                <Footer/>
+                <Header />
+                <Main {...this.state} />
+                <Share clipboard={ClipboardJS}  {...this.state} />
+                <Footer />
             </div>
         );
     }
